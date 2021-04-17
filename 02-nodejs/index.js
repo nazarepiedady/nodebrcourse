@@ -38,15 +38,22 @@ function resolveUser(error, user) {
 
 getUser(function resolveUser(error, user) {
   if (error) {
-    console.log('there is a error in user', error);
+    console.log('there is an error in user', error);
     return;
   }
 
   getUserPhone(user.id, function resolvePhone(error, phone) {
     if (error) {
-      console.log('there is a error in phone', error);
+      console.log('there is an error in phone', error);
       return;
     }
+
+    getUserAddress(user.id, function resolveAddress(error, address) {
+      if (error) {
+        console.log('there is an error in address', error);
+        return;
+      }
+    });
   });
 });
 
