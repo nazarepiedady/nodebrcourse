@@ -27,10 +27,11 @@ function getUserAddress(id) {
 
 }
 
-function resolveUser(error, user) {}
+function resolveUser(error, user) {
+  console.log('user', user);
+}
 
 getUser(resolveUser);
 //const phone = getUserPhone(user.id);
 
-console.log('user', user);
 //console.log('phone', phone);
