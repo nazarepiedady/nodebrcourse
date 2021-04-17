@@ -36,6 +36,7 @@ getUser(function resolveUser(error, user) {
     console.log('theres a problem in user', error);
     return;
   }
+  getUserPhone();
 });
 //const phone = getUserPhone(user.id);
 
