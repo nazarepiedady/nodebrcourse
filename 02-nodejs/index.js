@@ -14,12 +14,12 @@ function getUser(callback) {
   }, 1000);
 }
 
-function getUserPhone(id) {
+function getUserPhone(id, callback) {
   setTimeout(() => {
-    return {
+    return callback(null, {
       phone: '1199003',
       ddd: 22
-    }
+    });
   }, 2000);
 }
 
