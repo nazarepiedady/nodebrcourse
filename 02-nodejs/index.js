@@ -4,13 +4,13 @@
   3 - Get user's address by id
  */
 
-function getUser() {
+function getUser(callback) {
   setTimeout(function () {
-    return {
+    return callback(null, {
       id: 1,
       name: 'Marcos',
       birthDate: new Date()
-    }
+    })
   }, 1000);
 }
 
