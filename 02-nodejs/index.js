@@ -31,7 +31,12 @@ function resolveUser(error, user) {
   console.log('user', user);
 }
 
-getUser(resolveUser);
+getUser(function resolveUser(error, user) {
+  if (error) {
+    console.log('theres a problem in user', error);
+    return;
+  }
+});
 //const phone = getUserPhone(user.id);
 
 //console.log('phone', phone);
