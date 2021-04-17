@@ -5,7 +5,13 @@
  */
 
 function getUser() {
-
+  setTimeout(function () {
+    return {
+      id: 1,
+      name: 'Marcos',
+      birthDate: new Date()
+    }
+  }, 1000);
 }
 
 function getUserPhone(id) {
@@ -13,5 +19,5 @@ function getUserPhone(id) {
 }
 
 function getUserAddress(id) {
-  
+
 }
