@@ -15,7 +15,12 @@ function getUser() {
 }
 
 function getUserPhone(id) {
-
+  setTimeout(() => {
+    return {
+      phone: '1199003',
+      ddd: 22
+    }
+  }, 2000);
 }
 
 function getUserAddress(id) {
