@@ -53,6 +53,12 @@ getUser(function resolveUser(error, user) {
         console.log('there is an error in address', error);
         return;
       }
+
+      console.log(`
+        Name: ${user.name},
+        Address: ${address.street}, ${address.number},
+        Phone: (${phone.ddd})${phone.phone}
+      `);
     });
   });
 });
