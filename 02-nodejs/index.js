@@ -23,8 +23,13 @@ function getUserPhone(id, callback) {
   }, 2000);
 }
 
-function getUserAddress(id) {
-
+function getUserAddress(id, callback) {
+  setTimeout(() => {
+    return callback(null, {
+      street: 'dummies',
+      number: 0
+    });
+  });
 }
 
 function resolveUser(error, user) {
