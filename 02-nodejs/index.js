@@ -23,3 +23,4 @@ function getUserAddress(id) {
 }
 
 const user = getUser();
+const phone = getUserPhone(user.id);
