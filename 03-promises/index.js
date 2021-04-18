@@ -44,6 +44,9 @@ function getUserAddress(id, callback) {
 const userPromise = getUser();
 
 userPromise
+  .then(function (user) {
+    return getUserPhone(user.id);
+  })
   .then(function (result) {
     console.log('Result', result);
   })
