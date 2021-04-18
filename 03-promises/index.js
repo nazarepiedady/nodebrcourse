@@ -71,7 +71,11 @@ userPromise
     });
   })
   .then(function (result) {
-    console.log('Result', result);
+    console.log(`
+      Name: ${result.user.name}
+      Address: ${result.address.street}, ${result.address.number}
+      Phone: (${result.phone.ddd}) ${result.phone.phone}
+    `);
   })
   .catch(function (error) {
     console.error('Not good', error);
