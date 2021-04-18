@@ -32,10 +32,6 @@ function getUserAddress(id, callback) {
   });
 }
 
-function resolveUser(error, user) {
-  console.log('user', user);
-}
-
 // getUser(function resolveUser(error, user) {
 //   if (error) {
 //     console.log('there is an error in user', error);
