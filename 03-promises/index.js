@@ -61,6 +61,16 @@ userPromise
       });
   })
   .then(function (result) {
+    const address = getUserAddressAsync(result.user.id);
+    return address.then(function resolveAddress(address) {
+      return {
+        user: result.user,
+        phone: result.phone,
+        address: address
+      }
+    });
+  })
+  .then(function (result) {
     console.log('Result', result);
   })
   .catch(function (error) {
