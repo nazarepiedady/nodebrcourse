@@ -36,6 +36,19 @@ function getUserAddress(id, callback) {
   });
 }
 
+// to handle success use .then function
+// to handle errors use .catch function
+
+const userPromise = getUser();
+
+userPromise
+  .then(function (result) {
+    console.log('Result', result);
+  })
+  .catch(function (error) {
+    console.error('Not good', error);
+  })
+
 // getUser(function resolveUser(error, user) {
 //   if (error) {
 //     console.log('there is an error in user', error);
