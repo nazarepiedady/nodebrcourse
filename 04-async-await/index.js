@@ -48,8 +48,8 @@ async function main() {
   try {
     console.time('measure-promise');
     const user = await getUser();
-    const phone = await getUserPhone(user.id);
-    const address = await getUserAddressAsync(user.id);
+    //const phone = await getUserPhone(user.id);
+    //const address = await getUserAddressAsync(user.id);
 
     console.log(`
       Name: ${user.name}
