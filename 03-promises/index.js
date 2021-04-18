@@ -45,7 +45,16 @@ const userPromise = getUser();
 
 userPromise
   .then(function (user) {
-    return getUserPhone(user.id);
+    return getUserPhone(user.id)
+      .then(function resolvePhone(result) {
+        return {
+          user: {
+            name: user.name,
+            id: user.id
+          },
+          phone: result
+        }
+      });
   })
   .then(function (result) {
     console.log('Result', result);
