@@ -4,14 +4,18 @@
   3 - Get user's address by id
  */
 
-function getUser(callback) {
-  setTimeout(function () {
-    return callback(null, {
-      id: 1,
-      name: 'Marcos',
-      birthDate: new Date()
-    })
-  }, 1000);
+function getUser() {
+  // when it has any problem -> reject(error)
+  // when it has success -> resolve(success)
+  return new Promise(function resolvePromise(resolve, reject) {
+    setTimeout(function () {
+      return resolve({
+        id: 1,
+        name: 'Marcos',
+        birthDate: new Date()
+      })
+    }, 1000);
+  });
 }
 
 function getUserPhone(id, callback) {
