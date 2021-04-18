@@ -42,9 +42,26 @@ function getUserAddress(id, callback) {
   });
 }
 
+// 1 - add async word -> automatically it return a promise
+main();
+async function main() {
+  try {
+    const user = await getUser();
+    const phone = await getUserPhone(user.id);
+    const address = await getUserAddressAsync(user.id);
+
+    console.log(`
+      Name: ${user.name}
+      Address: ${address.street}, ${address.number}
+      Phone: (${phone.ddd}) ${phone.phone}
+    `);
+  } catch (error) {
+    console.error('Not good', error);
+  }
+}
+
 // to handle success use .then function
 // to handle errors use .catch function
-
 /* const userPromise = getUser();
 userPromise
   .then(function (user) {
