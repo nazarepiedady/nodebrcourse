@@ -19,3 +19,5 @@ let count = 0;
 setInterval(function () {
   myEmitter.emit(nameEvent, 'on ok button ' + (count++));
 }, 1000); */
+
+const stdin = process.openStdin();
