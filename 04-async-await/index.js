@@ -45,8 +45,7 @@ function getUserAddress(id, callback) {
 // to handle success use .then function
 // to handle errors use .catch function
 
-const userPromise = getUser();
-
+/* const userPromise = getUser();
 userPromise
   .then(function (user) {
     return getUserPhone(user.id)
@@ -79,7 +78,7 @@ userPromise
   })
   .catch(function (error) {
     console.error('Not good', error);
-  })
+  }) */
 
 // getUser(function resolveUser(error, user) {
 //   if (error) {
