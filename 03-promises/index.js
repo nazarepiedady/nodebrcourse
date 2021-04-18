@@ -4,6 +4,10 @@
   3 - Get user's address by id
  */
 
+// import a node.js modulo to convert a use callback function to promise
+const util = require('util');
+const getUserAddressAsync = util.promisify(getUserAddress);
+
 function getUser() {
   // when it has any problem -> reject(error)
   // when it has success -> resolve(success)
