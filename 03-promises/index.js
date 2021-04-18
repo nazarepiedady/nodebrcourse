@@ -36,32 +36,32 @@ function resolveUser(error, user) {
   console.log('user', user);
 }
 
-getUser(function resolveUser(error, user) {
-  if (error) {
-    console.log('there is an error in user', error);
-    return;
-  }
+// getUser(function resolveUser(error, user) {
+//   if (error) {
+//     console.log('there is an error in user', error);
+//     return;
+//   }
 
-  getUserPhone(user.id, function resolvePhone(error, phone) {
-    if (error) {
-      console.log('there is an error in phone', error);
-      return;
-    }
+//   getUserPhone(user.id, function resolvePhone(error, phone) {
+//     if (error) {
+//       console.log('there is an error in phone', error);
+//       return;
+//     }
 
-    getUserAddress(user.id, function resolveAddress(error, address) {
-      if (error) {
-        console.log('there is an error in address', error);
-        return;
-      }
+//     getUserAddress(user.id, function resolveAddress(error, address) {
+//       if (error) {
+//         console.log('there is an error in address', error);
+//         return;
+//       }
 
-      console.log(`
-        Name: ${user.name},
-        Address: ${address.street}, ${address.number},
-        Phone: (${phone.ddd})${phone.phone}
-      `);
-    });
-  });
-});
+//       console.log(`
+//         Name: ${user.name},
+//         Address: ${address.street}, ${address.number},
+//         Phone: (${phone.ddd})${phone.phone}
+//       `);
+//     });
+//   });
+// });
 
 //const phone = getUserPhone(user.id);
 //console.log('phone', phone);
