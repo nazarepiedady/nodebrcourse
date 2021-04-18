@@ -13,3 +13,9 @@ myEmitter.on(nameEvent, function (click) {
 
 myEmitter.emit(nameEvent, 'on scroll bar');
 myEmitter.emit(nameEvent, 'on ok button');
+
+let count = 0;
+
+setInterval(function () {
+  myEmitter.emit(nameEvent, 'on ok button ' + (count++));
+}, 1000);
