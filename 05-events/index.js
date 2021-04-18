@@ -21,3 +21,6 @@ setInterval(function () {
 }, 1000); */
 
 const stdin = process.openStdin();
+stdin.addListener('data', function (value) {
+  console.log(`You typed: ${value.toString().trim()}`);
+});
