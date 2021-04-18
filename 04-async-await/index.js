@@ -46,6 +46,7 @@ function getUserAddress(id, callback) {
 main();
 async function main() {
   try {
+    console.time('measure-promise');
     const user = await getUser();
     const phone = await getUserPhone(user.id);
     const address = await getUserAddressAsync(user.id);
@@ -55,6 +56,7 @@ async function main() {
       Address: ${address.street}, ${address.number}
       Phone: (${phone.ddd}) ${phone.phone}
     `);
+    console.timeEnd('measure-promise');
   } catch (error) {
     console.error('Not good', error);
   }
