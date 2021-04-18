@@ -50,6 +50,14 @@ async function main() {
     const user = await getUser();
     //const phone = await getUserPhone(user.id);
     //const address = await getUserAddressAsync(user.id);
+    
+    const result = await Promise.all([
+      getUserPhone(user.id),
+      getUserAddressAsync(user.id)
+    ]);
+
+    const phone = result[0];
+    const address = result[1];
 
     console.log(`
       Name: ${user.name}
