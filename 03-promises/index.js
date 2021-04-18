@@ -18,13 +18,15 @@ function getUser() {
   });
 }
 
-function getUserPhone(id, callback) {
-  setTimeout(() => {
-    return callback(null, {
-      phone: '1199003',
-      ddd: 22
-    });
-  }, 2000);
+function getUserPhone(id) {
+  return new Promise(function resolvePromise(resolve, reject) {
+    setTimeout(() => {
+      return resolve({
+        phone: '1199003',
+        ddd: 22
+      });
+    }, 2000);
+  });
 }
 
 function getUserAddress(id, callback) {
