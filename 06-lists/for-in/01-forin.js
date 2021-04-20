@@ -13,3 +13,5 @@ async function main() {
     console.log('Internal Error', error);
   }
 }
+
+main();
