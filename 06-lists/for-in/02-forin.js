@@ -4,7 +4,10 @@ async function main() {
   try {
     const names = [];
     const result = await service.getPeople('a');
-
+    for (let i in result.results) {
+      const person = result.results[i];
+      names.push(person.name);
+    }
     console.log(`Names`, names);
   } catch (error) {
     console.log('Internal Error', error);
