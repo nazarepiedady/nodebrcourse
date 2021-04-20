@@ -6,3 +6,7 @@ async function getPeople(name) {
   const response = await axios.get(url);
   return response.data;
 }
+
+module.exports = {
+  getPeople
+};
