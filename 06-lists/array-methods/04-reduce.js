@@ -19,9 +19,11 @@ async function main() {
       ['Erick', 'Wendel'],
       ['NodeBR', 'Nerdizao'],
     ];
-    const total = myList.cReduce((previous, next) => {
-      return previous.concat(next);
-    }, []);
+    const total = myList
+      .cReduce((previous, next) => {
+        return previous.concat(next);
+      }, [])
+      .join(',');
     console.log('Total', total);
   } catch (error) {
     console.error('There is a error', error);
