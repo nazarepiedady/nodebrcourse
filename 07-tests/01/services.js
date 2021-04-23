@@ -8,6 +8,13 @@ async function getPeople(name) {
   return result.data;
 }
 
+function mapPeople(item) {
+  return {
+    name: item.name,
+    weight: item.height,
+  };
+}
+
 module.exports = {
   getPeople,
 };
