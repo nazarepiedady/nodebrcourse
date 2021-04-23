@@ -1,5 +1,13 @@
 const { getPeople } = require('./services');
 
+Array.prototype.cReduce = function (callback, initialValue) {
+  let finalValue = typeof initialValue !== undefined ? initialValue : this[0];
+  for (let index = 0; index <= this.length - 1; index++) {
+    finalValue = callback(finalValue, this[index], this);
+  }
+  return finalValue;
+};
+
 async function main() {
   try {
     const { results } = await getPeople('a');
