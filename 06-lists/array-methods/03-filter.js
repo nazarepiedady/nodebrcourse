@@ -4,7 +4,7 @@ Array.prototype.cFilter = function (callback) {
   const list = [];
 
   for (index in this) {
-    const item = this[idenx];
+    const item = this[index];
     const result = callback(item, index, this);
     if (!result) continue;
     list.push(item);
