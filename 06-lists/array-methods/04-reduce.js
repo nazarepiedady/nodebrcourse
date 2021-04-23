@@ -15,6 +15,13 @@ async function main() {
     /*  const total = weight.reduce((previous, next) => {
       return previous + next;
     }); */
+    const myList = [
+      ['Erick', 'Wendel'],
+      ['NodeBR', 'Nerdizao'],
+    ];
+    const total = myList.cReduce((previous, next) => {
+      return previous.concat(next);
+    }, []);
     console.log('Total', total);
   } catch (error) {
     console.error('There is a error', error);
