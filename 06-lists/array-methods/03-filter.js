@@ -22,6 +22,10 @@ async function main() {
       return result;
     }); */
 
+    const familyLars = results.cFilter(
+      (item) => item.name.toLowerCase().indexOf('lars') !== -1
+    );
+
     const names = familyLars.map((person) => person.name);
 
     console.log(names);
