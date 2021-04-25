@@ -14,7 +14,11 @@ class Database {
 
   writeFile() {}
 
-  toList() {}
+  async list(id) {
+    const data = await this.getFileData();
+    const filteredData = data.filter((item) => (id ? item.id === id : true));
+    return filteredData;
+  }
 }
 
 module.exports = new Database();
