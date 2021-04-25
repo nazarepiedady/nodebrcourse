@@ -7,7 +7,10 @@ class Database {
     this._FILENAME = 'heroes.json';
   }
 
-  getFileData() {}
+  async getFileData() {
+    const file = await readFileAsync(this._FILENAME, 'utf8');
+    return JSON.parse(file.toString());
+  }
 
   writeFile() {}
 
