@@ -1,5 +1,7 @@
 const { deepStrictEqual, ok } = require('assert');
 
+const database = require('./database');
+
 const DEEFAULT_ITEM_REGISTER = {
   name: 'Flash',
   power: 'Speed',
