@@ -3,3 +3,5 @@ class Database {
   writeFile() {}
   toList() {}
 }
+
+module.exports = new Database();
