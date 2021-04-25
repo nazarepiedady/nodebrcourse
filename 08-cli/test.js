@@ -12,4 +12,10 @@ describe('Suite to manipulate heroes', () => {
 
     ok(null, expected);
   });
+
+  /* it('should register a hero, using files', async () => {
+    const expected = DEEFAULT_ITEM_REGISTER;
+
+    ok(null, expected);
+  }); */
 });
