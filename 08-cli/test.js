@@ -7,5 +7,9 @@ const DEEFAULT_ITEM_REGISTER = {
 };
 
 describe('Suite to manipulate heroes', () => {
-  it('should register a hero, using files', async () => {});
+  it('should register a hero, using files', async () => {
+    const expected = DEEFAULT_ITEM_REGISTER;
+
+    ok(null, expected);
+  });
 });
