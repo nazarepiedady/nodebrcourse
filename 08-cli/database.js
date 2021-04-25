@@ -1,6 +1,12 @@
 class Database {
+  constructor() {
+    this._FILENAME = 'heroes.json';
+  }
+
   getFileData() {}
+
   writeFile() {}
+
   toList() {}
 }
 
