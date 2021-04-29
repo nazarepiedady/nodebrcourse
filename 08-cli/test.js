@@ -9,6 +9,10 @@ const DEFAULT_ITEM_REGISTER = {
 };
 
 describe('Suite to manipulate heroes', () => {
+  before(async () => {
+    await database.register(DEFAULT_ITEM_REGISTER);
+  });
+
   it('should search a hero, using files', async () => {
     const expected = DEFAULT_ITEM_REGISTER;
     const [result] = await database.list(expected.id);
