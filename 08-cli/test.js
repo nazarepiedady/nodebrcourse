@@ -15,9 +15,9 @@ describe('Suite to manipulate heroes', () => {
     deepStrictEqual(result, expected);
   });
 
-  /* it('should register a hero, using files', async () => {
+  it('should register a hero, using files', async () => {
     const expected = DEEFAULT_ITEM_REGISTER;
 
     ok(null, expected);
-  }); */
+  });
 });
