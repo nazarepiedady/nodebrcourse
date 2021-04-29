@@ -3,6 +3,7 @@ const { promisify } = require('util');
 
 const readFileAsync = promisify(readFile);
 const writeFileAsync = promisify(writeFile);
+
 class Database {
   constructor() {
     this._FILENAME = 'heroes.json';
@@ -13,7 +14,10 @@ class Database {
     return JSON.parse(file.toString());
   }
 
-  async writeFile() {}
+  async writeFile(data) {
+    await writeFileAsync(this._FILENAME, JSON.stringify(data));
+    return true;
+  }
 
   async list(id) {
     const data = await this.getFileData();
