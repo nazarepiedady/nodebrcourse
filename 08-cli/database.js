@@ -23,7 +23,7 @@ class Database {
     const data = await this.getFileData();
     const id = hero.id <= 2 ? hero.id : Date.now();
     const heroWithId = { id, ...hero };
-    const finalData = { heroWithId, ...data };
+    const finalData = [heroWithId, ...data];
     const result = await this.writeFile(finalData);
     return result;
   }
