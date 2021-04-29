@@ -1,7 +1,8 @@
-const { readFile } = require('fs');
+const { readFile, writeFile } = require('fs');
 const { promisify } = require('util');
 
 const readFileAsync = promisify(readFile);
+
 class Database {
   constructor() {
     this._FILENAME = 'heroes.json';
@@ -12,7 +13,7 @@ class Database {
     return JSON.parse(file.toString());
   }
 
-  writeFile() {}
+  async writeFile() {}
 
   async list(id) {
     const data = await this.getFileData();
